@@ -15,45 +15,48 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.action_chains import ActionChains
 #from selenium import webdriver
 
-endereco = "RUA CONSELHEIRO RAMALHO 647"
+endereco = str(input("digite o endereço desejado \n digite 'sair' para encerrar "))
 
-PATH = 'C:\\chromedriver_win32\\chromedriver.exe'
-driver = webdriver.Chrome(PATH)
-
-
-atraso=1
-driver.get("https://www.google.com/maps/d/viewer?mid=1Cn5198YTPrwcJEoVW4B1RIkr1Sc&shorturl=1&ll=-23.6585768689163%2C-46.65878045507815&z=11")
-driver.set_window_size(1936, 1056)
-time.sleep(1)
-# ZOOM
-for vezes in range(6):
-  driver.find_element(By.CSS_SELECTOR, ".nJjxad-bEDTcc-LgbsSe").click()
-##ZOOM
-time.sleep(atraso)
-driver.find_element(By.CSS_SELECTOR, ".mU4ghb-G0jgYd-LgbsSe").click()
-time.sleep(atraso)
-driver.find_element(By.CSS_SELECTOR, ".whsOnd").click()
-time.sleep(atraso)
-#driver.execute_script("window.scrollTo(0,0)")
-#time.sleep(atraso)
-driver.find_element(By.CSS_SELECTOR, ".whsOnd").send_keys(endereco)
-time.sleep(atraso)
-driver.find_element(By.CSS_SELECTOR, ".whsOnd").send_keys(Keys.ENTER)
-time.sleep(atraso)
+while endereco != 'sair':  
+  
+  PATH = 'C:\\chromedriver_win32\\chromedriver.exe'
+  driver = webdriver.Chrome(PATH)
 
 
-#click de área 
-actionChains = ActionChains(driver)
-button_xpath  = "//*[@id='map-canvas']/div[1]/div/div[2]/div[2]/div/div[3]/div" 
-button = driver.find_element_by_xpath(button_xpath)
-actionChains.move_to_element(button).move_by_offset(5,0).click().perform()
-#click de área
+  atraso=1
+  driver.get("https://www.google.com/maps/d/viewer?mid=1Cn5198YTPrwcJEoVW4B1RIkr1Sc&shorturl=1&ll=-23.6585768689163%2C-46.65878045507815&z=11")
+  driver.set_window_size(1936, 1056)
+  time.sleep(1)
+  # ZOOM
+  for vezes in range(6):
+    driver.find_element(By.CSS_SELECTOR, ".nJjxad-bEDTcc-LgbsSe").click()
+  ##ZOOM
+  time.sleep(atraso)
+  driver.find_element(By.CSS_SELECTOR, ".mU4ghb-G0jgYd-LgbsSe").click()
+  time.sleep(atraso)
+  driver.find_element(By.CSS_SELECTOR, ".whsOnd").click()
+  time.sleep(atraso)
+  #driver.execute_script("window.scrollTo(0,0)")
+  #time.sleep(atraso)
+  driver.find_element(By.CSS_SELECTOR, ".whsOnd").send_keys(endereco)
+  time.sleep(atraso)
+  driver.find_element(By.CSS_SELECTOR, ".whsOnd").send_keys(Keys.ENTER)
+  time.sleep(atraso)
 
-driver.find_element(By.CSS_SELECTOR, ".gm-style > div:nth-child(2) > div:nth-child(2)").click()
-# 9 | pega o nome do distrito responsável e salva na variável 'distrito'
-time.sleep(atraso)
-distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").text
-print(distrito)
-time.sleep(15)
-driver.close()
+
+  #click de área 
+  actionChains = ActionChains(driver)
+  button_xpath  = "//*[@id='map-canvas']/div[1]/div/div[2]/div[2]/div/div[3]/div" 
+  button = driver.find_element_by_xpath(button_xpath)
+  actionChains.move_to_element(button).move_by_offset(5,0).click().perform()
+  #click de área
+
+  driver.find_element(By.CSS_SELECTOR, ".gm-style > div:nth-child(2) > div:nth-child(2)").click()
+  # 9 | pega o nome do distrito responsável e salva na variável 'distrito'
+  time.sleep(atraso)
+  distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").text
+  print(distrito)
+  time.sleep(15)
+  driver.close()
+  endereco = input("digite o endereço desejado \n digite 'sair' para encerrar ")  
 
