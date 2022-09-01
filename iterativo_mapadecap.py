@@ -55,8 +55,43 @@ while endereco != 'sair':
   # 9 | pega o nome do distrito responsável e salva na variável 'distrito'
   time.sleep(atraso)
   distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").text
-  print(distrito)
+  #print(distrito)
+
+  # verificando a seccional  
+  Sec_1= [1,2,3,4,5,6,8,12,77,78]
+  Sec_2= [16,17,26,27,35,36,83,95,96,97]
+  Sec_3= [7,14,15,23,33,34,37,46,51,75,87,89,91,93]
+  Sec_4= [9,13,19,20,28,38,39,40,45,72,73,74,90]
+  Sec_5= [10,18,21,29,30,31,42,52,56,57,58,81]
+  Sec_6= [11,25,43,47,48,80,85,92,98,99,100,101,102]
+  Sec_7= [22,24,32,50,59,62,63,64,65,67,68,103]
+  Sec_8= [41,44,49,53,54,55,66,69,70]
+  teste = distrito
+  teste_temp = int(teste.replace('º DP',''))
+
+  if teste_temp in Sec_1:
+    seccional = '1ª Seccional'
+  if teste_temp in Sec_2:
+    seccional = '2ª Seccional'
+  if teste_temp in Sec_3:
+    seccional = '3ª Seccional'
+  if teste_temp in Sec_4:
+    seccional = '4ª Seccional'
+  if teste_temp in Sec_5:
+    seccional = '5ª Seccional'
+  if teste_temp in Sec_6:
+    seccional = '6ª Seccional'
+  if teste_temp in Sec_7:
+    seccional = '7ª Seccional'
+  if teste_temp in Sec_8:
+    seccional = '8ª Seccional'
+  print(distrito+' da '+seccional)
+  # verificando a seccional
+  
   time.sleep(15)
   driver.close()
+      
   endereco = input("digite o endereço desejado \n digite 'sair' para encerrar ")  
+  
+  
 
