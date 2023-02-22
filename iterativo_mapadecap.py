@@ -51,7 +51,7 @@ while endereco != 'sair':
   actionChains.move_to_element(button).move_by_offset(5,0).click().perform()
   #click de área
 
-  driver.find_element(By.CSS_SELECTOR, ".gm-style > div:nth-child(2) > div:nth-child(2)").click()
+  #driver.find_element(By.CSS_SELECTOR, ".gm-style > div:nth-child(2) > div:nth-child(2)").click()
   # 9 | pega o nome do distrito responsável e salva na variável 'distrito'
   time.sleep(atraso)
   distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").text
@@ -66,26 +66,62 @@ while endereco != 'sair':
   Sec_6= [11,25,43,47,48,80,85,92,98,99,100,101,102]
   Sec_7= [22,24,32,50,59,62,63,64,65,67,68,103]
   Sec_8= [41,44,49,53,54,55,66,69,70]
+  tit_Sec_1='Ana Paula Medeiros Monteiro de Barros'
+  tit_Sec_2='Danilo Morais Correia'
+  tit_Sec_3='Fabio Guedes Rosa'
+  tit_Sec_4='Ronald Quene Justiniano Marques'
+  tit_Sec_5='Flavia Rocha Pinheiro'
+  tit_Sec_6='Sumaya M. S. Chahrour F. Carvalho'
+  tit_Sec_7='Luiz Augusto Romani de Oliveira'
+  tit_Sec_8='Lawrence Luiz Fernandes Ribeiro'
+  
   teste = distrito
   teste_temp = int(teste.replace('º DP',''))
 
   if teste_temp in Sec_1:
-    seccional = '1ª Seccional'
+    seccional = '1ª Delegacia Seccional de Polícia - Centro'
+    titular = tit_Sec_1
+    tit_gen = 'f'
   if teste_temp in Sec_2:
-    seccional = '2ª Seccional'
+    seccional = '2ª Delegacia Seccional de Polícia - Sul'
+    titular = tit_Sec_2
+    tit_gen = 'm'
   if teste_temp in Sec_3:
-    seccional = '3ª Seccional'
+    seccional = '3ª Delegacia Seccional de Polícia – Oeste'
+    titular = tit_Sec_3
+    tit_gen = 'm'
   if teste_temp in Sec_4:
-    seccional = '4ª Seccional'
+    seccional = '4ª Delegacia Seccional de Polícia - Norte'
+    titular = tit_Sec_4
+    tit_gen = 'm'
   if teste_temp in Sec_5:
-    seccional = '5ª Seccional'
+    seccional = '5ª Delegacia Seccional de Polícia - Leste'
+    titular = tit_Sec_5
+    tit_gen = 'f'
   if teste_temp in Sec_6:
-    seccional = '6ª Seccional'
+    seccional = '6ª Delegacia Seccional de Polícia – Santo Amaro'
+    titular = tit_Sec_6
+    tit_gen = 'f'
   if teste_temp in Sec_7:
-    seccional = '7ª Seccional'
+    seccional = '7ª Delegacia Seccional de Polícia - Itaquera'
+    titular = tit_Sec_7
+    tit_gen = 'm'
   if teste_temp in Sec_8:
-    seccional = '8ª Seccional'
+    seccional = '8ª Delegacia Seccional de Polícia – São Mateus'
+    titular = tit_Sec_8
+    tit_gen = 'm'
+  
+  texto = ''  
+  texto_f =" Excelentíssima Senhora Doutora \n "+titular+" \n DD. Delegada de Polícia do \n Centro de Inteligência Policial – CIP \n "+seccional+" \n Encaminho a V. Exª. denúncia oriunda da Ouvidoria Nacional de Direitos Humanos, para conhecimento e providências pertinentes, servindo-se informar diretamente ao Órgão interessado, com brevidade. \n \n Atenciosamente,"
+  texto_m = " Excelentíssimo Senhor Doutor \n "+titular+" \n DD. Delegado de Polícia do \n Centro de Inteligência Policial – CIP \n "+seccional+" \n Encaminho a V. Exª. denúncia oriunda da Ouvidoria Nacional de Direitos Humanos, para conhecimento e providências pertinentes, servindo-se informar diretamente ao Órgão interessado, com brevidade. \n \n Atenciosamente,"
+  
+  if tit_gen == 'm':
+    texto = texto_m
+  if tit_gen == 'f':
+    texto = texto_f
+    
   print(distrito+' da '+seccional)
+  print (texto)
   # verificando a seccional
   
   time.sleep(15)
