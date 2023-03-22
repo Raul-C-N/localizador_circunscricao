@@ -75,8 +75,17 @@ while endereco != 'sair':
   tit_Sec_7='Luiz Augusto Romani de Oliveira'
   tit_Sec_8='Lawrence Luiz Fernandes Ribeiro'
   
+  #normatiza o número do distrito para teste posterior
   teste = distrito
-  teste_temp = int(teste.replace('º DP',''))
+  try:
+    teste_temp = int(teste.replace('º DP',''))
+  except:
+    try: 
+      teste_temp = int(teste.replace('ºDP',''))
+    except:
+      print ('erro no módulo de normatização dos DPs')
+  #/normatiza o número do distrito para teste posterior
+  
 
   if teste_temp in Sec_1:
     seccional = '1ª Delegacia Seccional de Polícia - Centro'
