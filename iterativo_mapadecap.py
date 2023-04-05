@@ -71,7 +71,7 @@ while endereco != 'sair':
   tit_Sec_3='Fabio Guedes Rosa'
   tit_Sec_4='Ronald Quene Justiniano Marques'
   tit_Sec_5='Flavia Rocha Pinheiro'
-  tit_Sec_6='Sumaya M. S. Chahrour F. Carvalho'
+  tit_Sec_6='Vander Cristian Rodrigues'
   tit_Sec_7='Luiz Augusto Romani de Oliveira'
   tit_Sec_8='Lawrence Luiz Fernandes Ribeiro'
   
