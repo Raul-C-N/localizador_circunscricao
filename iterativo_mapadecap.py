@@ -110,7 +110,7 @@ while endereco != 'sair':
   if teste_temp in Sec_6:
     seccional = '6ª Delegacia Seccional de Polícia – Santo Amaro'
     titular = tit_Sec_6
-    tit_gen = 'f'
+    tit_gen = 'm'
   if teste_temp in Sec_7:
     seccional = '7ª Delegacia Seccional de Polícia - Itaquera'
     titular = tit_Sec_7
