@@ -47,14 +47,17 @@ while endereco != 'sair':
   #click de área 
   actionChains = ActionChains(driver)
   button_xpath  = "//*[@id='map-canvas']/div[1]/div/div[2]/div[2]/div/div[3]/div" 
-  button = driver.find_element_by_xpath(button_xpath)
+  #metodo deprecado // button = driver.find_element_by_xpath(button_xpath)
+  button = driver.find_element("xpath", button_xpath) #novo metodo
   actionChains.move_to_element(button).move_by_offset(5,0).click().perform()
+  
   #click de área
 
   #driver.find_element(By.CSS_SELECTOR, ".gm-style > div:nth-child(2) > div:nth-child(2)").click()
   # 9 | pega o nome do distrito responsável e salva na variável 'distrito'
   time.sleep(atraso)
-  distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").text
+  #metodo deprecado // distrito = driver.find_element_by_class_name("qqvbed-tJHJj-fmcmS").
+  distrito = driver.find_element(By.CLASS_NAME, "qqvbed-tJHJj-fmcmS").text #novo metodo
   #print(distrito)
 
   # verificando a seccional  
