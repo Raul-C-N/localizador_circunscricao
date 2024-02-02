@@ -19,7 +19,7 @@ endereco = str(input("digite o endereço desejado \n digite 'sair' para encerrar
 
 while endereco != 'sair':  
   
-  PATH = 'C:\\chromedriver_win32\\chromedriver.exe'
+  PATH = 'C:\\chromedriver-win64\\chromedriver.exe'
   driver = webdriver.Chrome(PATH)
 
 
