@@ -46,7 +46,7 @@ while endereco != 'sair':
 
   #click de área 
   actionChains = ActionChains(driver)
-  button_xpath  = "//*[@id='map-canvas']/div[1]/div/div[2]/div[2]/div/div[3]/div" 
+  button_xpath  = "//*[@id='map-canvas']" #xpath atualizado em 24/05/2024
   button = driver.find_element_by_xpath(button_xpath)
   actionChains.move_to_element(button).move_by_offset(5,0).click().perform()
   #click de área
