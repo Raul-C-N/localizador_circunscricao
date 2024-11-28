@@ -75,7 +75,7 @@ while endereco != 'sair':
   tit_Sec_5='Flavia Rocha Pinheiro'
   tit_Sec_6='Vander Cristian Rodrigues'
   tit_Sec_7='Luiz Augusto Romani de Oliveira'
-  tit_Sec_8='Lawrence Luiz Fernandes Ribeiro'
+  tit_Sec_8='Guilherme Leonel Santos'
   
   #normatiza o número do distrito para teste posterior
   teste = distrito
