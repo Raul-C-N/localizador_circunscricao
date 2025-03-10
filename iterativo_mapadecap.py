@@ -74,7 +74,7 @@ while endereco != 'sair':
   tit_Sec_4='Ronald Quene Justiniano Marques'
   tit_Sec_5='Juliana Souto Cruz'
   tit_Sec_6='Vander Cristian Rodrigues'
-  tit_Sec_7='Luiz Augusto Romani de Oliveira'
+  tit_Sec_7='Bruno Santos Gomes Marques'
   tit_Sec_8='Guilherme Leonel Santos'
   
   #normatiza o número do distrito para teste posterior
