@@ -18,7 +18,7 @@ Pirituba / São Domingos ,05100-000 ,05199-999 ,,,Norte
 Jaraguá / Perus ,05200-000 ,05299-999 ,,,Norte
 Belém / Brás / Pari ,03000-000 ,03099-999 ,,,Leste
 Mooca / Vila Prudente / Água Rasa ,03100-000 ,03199-999 ,,,Leste
-São Lucas / Sapopemba ,03200-000 ,03299-999 ,,,Leste
+São Lucas / Sapopemba ,03200-000 ,03299-999 ,8,,Leste
 Tatuapé / Vila Formosa ,03300-000 ,03399-999 ,,,Leste
 Vila Carrão ,03400-000 ,03499-999 ,,,Leste
 Vila Matilde / Artur Alvim ,03500-000 ,03599-999 ,,,Leste
@@ -27,7 +27,7 @@ Cangaiba / Ponte Rasa ,03700-000 ,03799-999 ,,,Leste
 Ermelino Matarazzo ,03800-000 ,03899-999 ,,,Leste
 São Mateus ,03900-000 ,03999-999 ,,,Leste
 São Mateus pt2,08300-000 ,08399-999 ,,,Leste
-São Miguel ,08000-000 ,08099-999 ,,,Leste
+São Miguel ,08000-000 ,08099-999 ,7,,Leste
 Itaim Paulista ,08100-000 ,08199-999 ,,,Leste
 Itaquera ,08200-000 ,08299-999 ,,,Leste
 Guaianazes ,08400-000 ,08499-999 ,7,,Leste
@@ -40,7 +40,7 @@ Cidade Ademar / Pedreira ,04400-000 ,04499-999 ,,,Sul
 Itaim Bibi ,04500-000 ,04599-999 ,,,Sul
 Campo Belo ,04600-000 ,04699-999 ,,,Sul
 Santo Amaro ,04700-000 ,04799-999 ,,,Sul
-Cidade Dutra / Grajaú / Parelheiros ,04800-000 ,04899-999 ,,,Sul
+Cidade Dutra / Grajaú / Parelheiros ,04800-000 ,04899-999 ,6,,Sul
 Capela do Socorro ,04900-000 ,04999-999 ,,,Sul
 Campo Limpo ,05700-000 ,05799-999 ,,,Sul
 Capão Redondo ,05800-000 ,05899-999 ,,,Sul
