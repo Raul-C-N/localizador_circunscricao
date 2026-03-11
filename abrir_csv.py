@@ -15,7 +15,7 @@ def info():
     return df.info()
 
 
-#Acessp linhas específicas:
+#Acesso linhas específicas:
 def primeiras_linhas(n):
     """retorna as n primeiras linhas da tabela"""
     return df.head(n)
@@ -23,6 +23,11 @@ def primeiras_linhas(n):
 def ultimas_linhas(n):
     """retorna as n últimas linhas da tabela"""
     return df.tail(n)
+
+def distrito_por_linha(indice):
+    """retorna os dados de distrito, CEP de início e CEP de fim, de uma linha específica pelo índice"""
+    return df[['distritos','CEP_inicio', 'CEP_fim']].iloc[indice]
+
 
 print("dados de CEP carregados com sucesso")
 # # Acessar colunas:
@@ -56,8 +61,16 @@ print("dados de CEP carregados com sucesso")
 # # Retrieved 2026-03-11, License - CC BY-SA 4.0
 
 # for i in range(len(df)):
+
 #     #print(df['a'][i] will produce KeyError: 0
 #     #This is because, range(2) [length of df] will give
 #     #0, 1
 #     #But we don't have 0 as a row in df
-#     print(df['CEP Início'].iloc[i])
+#     print(df['CEP_inicio'].iloc[i])
+
+# df["CEP_inicio"].iloc[14]
+# df[['distritos','CEP_inicio', 'CEP_fim']].iloc[23]
+
+
+
+# distrito_por_linha(26)
