@@ -1,0 +1,4 @@
+Rua Augusta, 1000
+Av Paulista, 1578
+Rua Vergueiro, 500
+sair
