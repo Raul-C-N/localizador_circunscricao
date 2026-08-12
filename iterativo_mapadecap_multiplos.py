@@ -15,6 +15,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # biblioteca para clique em coordenadas
 from selenium.webdriver.common.action_chains import ActionChains
 #from selenium import webdriver
+lista_seccionais = []
 lista_distritos = []
 lista_endereços=[]
 dict_resultados = {}
@@ -140,9 +141,11 @@ while endereco != 'sair':
   # verificando a seccional
   lista_endereços.append(endereco)
   lista_distritos.append(distrito)
+  lista_seccionais.append(seccional)
+  
+  print(lista_seccionais)
   print(lista_distritos)
   print(lista_endereços)
-  
   # time.sleep(15)
   driver.close()
       
