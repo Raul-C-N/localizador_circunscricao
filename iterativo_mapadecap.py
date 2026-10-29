@@ -134,7 +134,7 @@ while endereco != 'sair':
     texto = texto_f
     
   print(distrito+' da '+seccional)
-  print (texto)
+  #print (texto)
   # verificando a seccional
   
   time.sleep(15)
